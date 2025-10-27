@@ -1,8 +1,8 @@
 <?php
 
-   $db_name = 'mysql:host=localhost;dbname=hotel_db';
+   $db_name = 'mysql:host=mysql-bhy5.railway.internal;dbname=railway';
    $db_user_name = 'root';
-   $db_user_pass = '';
+   $db_user_pass = 'amIniauJjxegxlFoUewpFJnRlinRoOwA';
 
    $conn = new PDO($db_name, $db_user_name, $db_user_pass);
 
@@ -17,5 +17,6 @@
       }
       return implode($rand);
    }
+
 
 ?>
