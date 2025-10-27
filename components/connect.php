@@ -1,18 +1,14 @@
 <?php
-$servername = "nozomi.proxy.rlwy.net";  // host
-$username   = "root";                   // user
-$password   = "udWClIDWZOdJtUOtBwdYZLAnKuq5yL";  // password dari Railway
-$dbname     = "railway";                // nama database (biasanya "railway")
-$port       = 40912;                    // port dari Railway
+$servername = "mysql.railway.internal";
+$username = "root";
+$password = "IIsKyCqhHSHdZCIRiCNJzdosnQSMRrsS";
+$dbname = "railway";
 
-$conn = new mysqli($servername, $username, $password, $dbname, $port);
-
-// cek koneksi
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} else {
-    echo "Database connected successfully!";
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // echo "Connected successfully"; // test koneksi
+} catch(PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
 }
 ?>
-
-
