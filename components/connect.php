@@ -1,8 +1,8 @@
 <?php
 
-   $db_name = 'mysql:host=mysql-bhy5.railway.internal;dbname=railway';
+   $db_name = 'mysql:host=mysql.railway.internal;dbname=railway';
    $db_user_name = 'root';
-   $db_user_pass = 'amIniauJjxegxlFoUewpFJnRlinRoOwA';
+   $db_user_pass = 'udWCllDWZOdJtUOtBwdyZLAInKuUqSyL';
 
    $conn = new PDO($db_name, $db_user_name, $db_user_pass);
 
@@ -20,3 +20,4 @@
 
 
 ?>
+
